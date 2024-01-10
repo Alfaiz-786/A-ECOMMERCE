@@ -36,7 +36,7 @@ export default function RegisterForm() {
         return;
       }
 
-      const res = await fetch("api/register", {
+      const res = await fetch("https://a-ecommerce.vercel.app/api/register", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
