@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import styles from "@/app/header.module.css";
-import Nav from "../components/Nav";
+import Nav from "../../components/Nav";
 
 const Header = () => {
   return (

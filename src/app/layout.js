@@ -6,6 +6,7 @@ import "@fortawesome/fontawesome-svg-core/styles.css";
 import { GlobalProvider } from "./GlobalProvider";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { AuthProvider } from "./Providers";
 
 const roboto = Roboto({
   weight: ["300", "400", "500", "700", "900"],
@@ -22,12 +23,14 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={roboto.className}>
-        <GlobalProvider>
-          <Header />
-          {children}
-          <Footer />
-          <ToastContainer />
-        </GlobalProvider>
+        <AuthProvider>
+          <GlobalProvider>
+            <Header />
+            {children}
+            <Footer />
+            <ToastContainer />
+          </GlobalProvider>
+        </AuthProvider>
       </body>
     </html>
   );

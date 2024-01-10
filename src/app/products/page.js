@@ -1,6 +1,6 @@
 import Head from "next/head";
 import Link from "next/link";
-import ProductCard from "../components/ProductCard";
+import ProductCard from "../../components/ProductCard";
 import styles from "@/app/products/products.module.css";
 
 const Products = async () => {
