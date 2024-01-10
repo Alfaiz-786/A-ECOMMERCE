@@ -21,7 +21,7 @@ export default function RegisterForm() {
     }
 
     try {
-      const resUserExists = await fetch("https://a-ecommerce.vercel.app/api/userExists", {
+      const resUserExists = await fetch("/api/userExists", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -36,7 +36,7 @@ export default function RegisterForm() {
         return;
       }
 
-      const res = await fetch("https://a-ecommerce.vercel.app/api/register", {
+      const res = await fetch("/api/register", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
